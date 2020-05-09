@@ -1,0 +1,9 @@
+{
+  "name": "plant-simulator",
+  "version": "1.0.0",
+  "description": "A app that tells you which plant you should have due to your climate conditions, water avaibility and if you have pets or not",
+  "main": "index.js",
+  "repository": "https://github.com/vitorcominato/plant-simulator.git",
+  "author": "Vitor Giovanni Cominato de Amorim",
+  "license": "MIT"
+}
