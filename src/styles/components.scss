@@ -1,0 +1,18 @@
+/* Header */
+header {
+     > .logo {
+        width: 208px;
+        height: 25px;
+        background: url('/assets/images/green-logo.png') no-repeat 0;
+        text-indent: -9999px;
+        font-size: 0;
+        overflow: hidden;
+    }
+    > .title-page {
+        font-size: 55px;
+        color: $colortitle;
+        font-weight: 800;
+        line-height: 60px;
+        margin: 40px 0 65px;
+    }
+}
