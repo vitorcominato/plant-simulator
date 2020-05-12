@@ -174,9 +174,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _com
   !*** ./src/styles/main.scss ***!
   \******************************/
 /*! no static exports found */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-eval("throw new Error(\"Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\\nSassError: Undefined variable: \\\"$colortitle\\\".\\n        on line 13 of C:\\\\projetos\\\\red-ventures\\\\plant-simulator\\\\src\\\\styles\\\\components.scss\\n>>         color: $colortitle;\\r\\n   ---------------^\\n\\n    at C:\\\\projetos\\\\red-ventures\\\\plant-simulator\\\\node_modules\\\\webpack\\\\lib\\\\NormalModule.js:316:20\\n    at C:\\\\projetos\\\\red-ventures\\\\plant-simulator\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:367:11\\n    at C:\\\\projetos\\\\red-ventures\\\\plant-simulator\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:233:18\\n    at context.callback (C:\\\\projetos\\\\red-ventures\\\\plant-simulator\\\\node_modules\\\\loader-runner\\\\lib\\\\LoaderRunner.js:111:13)\\n    at Object.callback (C:\\\\projetos\\\\red-ventures\\\\plant-simulator\\\\node_modules\\\\sass-loader\\\\dist\\\\index.js:73:7)\\n    at Object.done [as callback] (C:\\\\projetos\\\\red-ventures\\\\plant-simulator\\\\node_modules\\\\neo-async\\\\async.js:8067:18)\\n    at options.error (C:\\\\projetos\\\\red-ventures\\\\plant-simulator\\\\node_modules\\\\node-sass\\\\lib\\\\index.js:294:32)\");\n\n//# sourceURL=webpack:///./src/styles/main.scss?");
+eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/styles/main.scss?");
 
 /***/ }),
 

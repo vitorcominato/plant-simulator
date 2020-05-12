@@ -38,7 +38,19 @@ h5 {
 /* tablet, landscape iPad, lo-res laptops ands desktops */
 /* big landscape tablets, laptops, and desktops */
 /* hi-res laptops and desktops */
+/* Header */
+header > .logo {
+  width: 208px;
+  height: 25px;
+  background: url("/assets/images/green-logo.png") no-repeat 0;
+  text-indent: -9999px;
+  font-size: 0;
+  overflow: hidden; }
 
-
-
+header > .title-page {
+  font-size: 55px;
+  color: #0b2a1e;
+  font-weight: 800;
+  line-height: 60px;
+  margin: 40px 0 65px; }
 
