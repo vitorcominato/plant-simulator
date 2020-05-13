@@ -1,13 +1,75 @@
 const FormResult = {
-  render: async () => {
-    const view = `
-      <section>
-          <h1> Form Result </h1>
-      </section>
-    `;
-    return view;
+  isDragging: false,
+  touchAxis: {
+    start: 0,
+    end: 0,
   },
+
+  setWidthSwiper: (numberOfCards) => {
+    const widthResult = (document.querySelector('.box-card').offsetWidth * numberOfCards) + 20;
+    document.getElementById('result-cards').style.width = `${widthResult}px`;
+  },
+
+  render: async () => `
+    <section class="form-result" id="result-section">
+      <div class="data-empty" id="data-empty">
+        <div class="box-data-empty">
+          <h3>No results yet…</h3>
+          <p>Use the filters above to find the plant that best fits your environment :)</p>
+        </div>
+        <div class="box-data-empty img-box">
+          <img src="/assets/images/dataempty.png" alt="">
+        </div>
+      </div>
+      <div class="data-result hide" id="data-result">
+        <img class="pick-image" src="/assets/images/pick.png">
+        <h3 class="title-result">Our picks for you</h3>
+        <div class="list-results">
+          <ul class="result-cards" id="result-cards"></ul>
+        </div>
+        <button class="btn" id="btn-back-to-top">
+          <i class="icon-pointer-up"></i>
+          back to the top
+        </button>
+      </div>
+      <div class="loading-spinner hide" id="loading">
+        <div class="spinner">
+          <div></div>
+        </div>
+      </div>
+    </section>
+  `,
+
   componentDidMount: async () => {
+    const DOMResulCards = document.getElementById('result-cards');
+    document.getElementById('btn-back-to-top').onclick = () => {
+      document.getElementById('top-content').scrollIntoView();
+    };
+
+    /** Swipe iteration */
+    DOMResulCards.addEventListener('touchstart', (event) => {
+      FormResult.isDragging = true;
+      FormResult.touchAxis.start = event.touches[0].clientX;
+    });
+
+    DOMResulCards.addEventListener('touchmove', (event) => {
+      const moved = FormResult.touchAxis.start - event.touches[0].clientX;
+      FormResult.touchAxis.start = event.touches[0].clientX;
+      const widthResultCards = DOMResulCards.offsetWidth;
+      const maxSwipe = document.querySelector('.box-card').offsetWidth - widthResultCards;
+
+      const currentLeftPx = getComputedStyle(DOMResulCards).left;
+      const currentLeft = Number(currentLeftPx.split('px')[0]);
+      let newPosition = currentLeft - moved;
+      newPosition = newPosition > 0 ? 0 : newPosition;
+      newPosition = newPosition < maxSwipe ? maxSwipe : newPosition;
+
+      DOMResulCards.style.left = `${newPosition}px`;
+    });
+
+    DOMResulCards.addEventListener('touchend', () => {
+      FormResult.isDragging = false;
+    });
   },
 };
 
