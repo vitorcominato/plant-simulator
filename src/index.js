@@ -1,9 +1,9 @@
-/** Regenerator importado para que funcoes async await funcionem */
+/** Regenerator is imported so the async await functions work properly */
 import 'regenerator-runtime/runtime';
 import Home from './pages/Home';
 import Error404 from './pages/Error404';
 
-// Lista de rotas
+// Route list
 const routes = {
   '/': Home,
 };

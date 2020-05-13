@@ -5,23 +5,27 @@ import FormResult from '../components/FormResult';
 const Home = {
   render: async () => {
     const header = await Header.render();
-    await Header.componentDidMount();
-
     const formQuestions = await FormQuestions.render();
-    await FormQuestions.componentDidMount();
-
     const formResult = await FormResult.render();
-    await FormResult.componentDidMount();
 
     return `
-      <main class="content">
-        ${header}
-        ${formQuestions}
-        ${formResult}
-      </main>
+      <section class="top-content" id="top-content">
+        <div class="container">
+          ${header}
+          ${formQuestions}
+        </div>
+      </section>
+      <section class="bottom-content">
+        <div class="container">
+          ${formResult}
+        </div>
+      </section>
     `;
   },
   componentDidMount: async () => {
+    Header.componentDidMount();
+    FormQuestions.componentDidMount();
+    FormResult.componentDidMount();
   },
 };
 

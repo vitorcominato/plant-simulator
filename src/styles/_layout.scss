@@ -1,11 +1,29 @@
 #root {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+
+    .top-content,
+    .bottom-content {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-bottom: 70px;
+        .container {
+            width: 900px;
+            padding: 0 20px;
+        }
+    }
+    .bottom-content {
+        background-color: #F2F2F2;
+    }
 }
 
-.content {
-    width: 860px;
+.hide {
+    display: none !important;
 }
+
+
 
 /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
 @media (min-width: 320px) {
