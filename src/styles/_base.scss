@@ -1,22 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap");
 
-// Variáveis
+// Variables
 
-// Cores
-$color-primary: #15573F;
-$color-secondary: #FD9872;
-$color-primary-light: #7BAF9E;
+// Colors
+$color-primary: #15573f;
+$color-secondary: #fd9872;
+$color-primary-light: #7baf9e;
 
-$colortitle: #0b2a1e;
+$color-title: #0b2a1e;
 
-// Font
+// Fonts
 $font-family: "Montserrat", sans-serif;
+
+$animation-prop: data-order !default;
 
 // Reset
 html {
     height: 100%;
     box-sizing: border-box;
     font-size: 100%;
+    scroll-behavior: smooth;
 }
 *,
 *:before,
@@ -31,11 +34,64 @@ body {
     font-family: $font-family;
     color: #3b3b3b;
 }
-h1,
-h2,
-h3,
-h4,
-h5 {
-    margin: 6px;
-    padding: 0;
+
+/* Font Icons */
+/* Code copied from iconmoon */
+@font-face {
+    font-family: "icomoon";
+    src: url("/assets/fonts/icons/icomoon.eot?rel7yd");
+    src: url("/assets/fonts/icons/icomoon.eot?rel7yd#iefix") format("embedded-opentype"),
+        url("/assets/fonts/icons/icomoon.ttf?rel7yd") format("truetype"),
+        url("/assets/fonts/icons/icomoon.woff?rel7yd") format("woff"),
+        url("/assets/fonts/icons/icomoon.svg?rel7yd#icomoon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: "icomoon" !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pointer-up:before {
+    content: "\e909";
+}
+.icon-non-toxic:before {
+    content: "\e908";
+}
+.icon-arrow-down:before {
+    content: "\e900";
+}
+.icon-high-sun:before {
+    content: "\e901";
+}
+.icon-low-sun:before {
+    content: "\e902";
+}
+.icon-no-sun:before {
+    content: "\e903";
+}
+.icon-onde-drop:before {
+    content: "\e904";
+}
+.icon-three-drops:before {
+    content: "\e905";
+}
+.icon-toxic:before {
+    content: "\e906";
+}
+.icon-two-drops:before {
+    content: "\e907";
 }
