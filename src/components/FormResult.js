@@ -50,7 +50,7 @@ const FormResult = {
     DOMResulCards.addEventListener('touchstart', (event) => {
       FormResult.isDragging = true;
       FormResult.touchAxis.start = event.touches[0].clientX;
-    });
+    }, { passive: true });
 
     DOMResulCards.addEventListener('touchmove', (event) => {
       const moved = FormResult.touchAxis.start - event.touches[0].clientX;
@@ -65,11 +65,11 @@ const FormResult = {
       newPosition = newPosition < maxSwipe ? maxSwipe : newPosition;
 
       DOMResulCards.style.left = `${newPosition}px`;
-    });
+    }, { passive: true });
 
     DOMResulCards.addEventListener('touchend', () => {
       FormResult.isDragging = false;
-    });
+    }, { passive: true });
   },
 };
 
