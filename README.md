@@ -46,9 +46,6 @@ npm run build
 ```
 
 ## Considerations
-Develop this thinking about componentization and trying to show my css and javascript habilities as my organization building a application from ground zero.
+Develop this thinking about componentization and trying to show my css and javascript habilities as my organization building a application from scratch.
 If you guys think it is not a good approach, please help me with a feedback or a code review. That would be great :)
 
-## Browser Support
-
-This app supports all [modern browsers](http://browserl.ist/?q=%3E%3D+1%25).
