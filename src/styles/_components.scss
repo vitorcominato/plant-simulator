@@ -31,12 +31,6 @@ header {
     li {
       padding: 25px 0;
       width: 100%;
-      h3 {
-        @include font-size($font-sm);
-        font-weight: normal;
-        color: #848484;
-        margin: 15px 0 25px;
-      }
       // Padding-top in last image to correct height diference between images
       &:last-child img {
         padding: 6px 0 7px;
@@ -145,15 +139,18 @@ header {
     padding: 11px 18px;
   }
   .label-select {
-    position: absolute;
-    opacity: 0;
+    display: inline-block;
+    @include font-size($font-sm);
+    font-weight: normal;
+    color: #848484;
+    margin: 15px 0 25px;
   }
   .icon-arrow-down {
     position: absolute;
     @include font-size($font-xs);
     color: $color-grey;
     right: 15px;
-    top: 15px;
+    bottom: 15px;
   }
 }
 

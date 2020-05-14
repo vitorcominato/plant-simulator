@@ -12,10 +12,12 @@ const CustomSelect = {
     const htmlOptions = CustomSelect.loadOptions(options);
     return `
       <div class="box-select">
+        <label for="${id}" class="label-select">
+          ${label}
+        </label>
         <select class="custom-select" id="${id}">
           ${htmlOptions}
         </select>
-        <label for="${id}" class="label-select">${label}</label>
         <i class="icon-arrow-down"></i>
       </div>
     `;

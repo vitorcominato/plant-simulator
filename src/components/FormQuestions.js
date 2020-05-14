@@ -139,7 +139,7 @@ const FormQuestions = {
     const lightSelect = await CustomSelect.render(
       lightOptions,
       'slc-light',
-      'Light info',
+      '<b>2.</b> Set the amount of <b>sunlight</b> your plant will get.',
     );
 
     const waterOptions = [
@@ -163,7 +163,7 @@ const FormQuestions = {
     const waterSelect = await CustomSelect.render(
       waterOptions,
       'slc-water',
-      'Water info',
+      '<b>2.</b> How often do you want to <b>water</b> your plant?',
     );
 
     const petOptions = [
@@ -184,33 +184,21 @@ const FormQuestions = {
     const petSelect = await CustomSelect.render(
       petOptions,
       'slc-pet',
-      'Toxicity info',
+      '<b>3.</b> Do you have pets? Do they <b>chew</b> plants?',
     );
     return `
       <section class="form-question">
           <ul class="form-list">
             <li>
               <img src="/assets/images/sun.png" alt="Sun">
-              <h3>
-                <b>2.</b>
-                Set the amount of <b>sunlight</b> your plant will get.
-              </h3>
               ${lightSelect}
             </li>
             <li>
               <img src="/assets/images/wateringcan.png" alt="Watering Can">
-              <h3>
-                <b>2.</b>
-                How often do you want to <b>water</b> your plant?
-              </h3>
               ${waterSelect}
             </li>
             <li>
               <img src="/assets/images/dog.png" alt="Dog">
-              <h3>
-                <b>3.</b>
-                Do you have pets? Do they <b>chew</b> plants? 
-              </h3>
               ${petSelect}
             </li>
           </ul>
