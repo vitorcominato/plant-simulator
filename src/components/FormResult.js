@@ -18,7 +18,7 @@ const FormResult = {
           <p>Use the filters above to find the plant that best fits your environment :)</p>
         </div>
         <div class="box-data-empty img-box">
-          <img src="/assets/images/dataempty.png" alt="No Data">
+          <img class="no-data" src="/assets/images/dataempty.png" alt="No Data">
         </div>
       </div>
       <div class="data-result hide" id="data-result">

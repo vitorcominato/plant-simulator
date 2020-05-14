@@ -13,7 +13,6 @@ $color-grey: #a8a8a8;
 $color-background: #fff;
 $color-bottom: #f2f2f2;
 
-
 // Font-family
 $font-family: "Montserrat", sans-serif;
 
@@ -33,131 +32,147 @@ $animation-prop: data-order !default;
 
 // Reset
 html {
-    height: 100%;
-    box-sizing: border-box;
-    font-size: 100%;
-    scroll-behavior: smooth;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 100%;
+  scroll-behavior: smooth;
 }
 
 *,
-*:before,
-*:after {
-    box-sizing: inherit;
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow-x: hidden;
-    font-family: $font-family;
-    color: #3b3b3b;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: $font-family;
+  color: #3b3b3b;
 }
 
 // Functions
-@function calculateRem($size) {
-    $remSize: $size / $font-md;
-    @return $remSize * 1rem;
+@function calculate-rem($size) {
+  $remSize: $size / $font-md;
+
+  @return $remSize * 1rem;
 }
 
 // Mixins
 @mixin font-size($size) {
-    font-size: calculateRem($size);
+  font-size: calculate-rem($size);
 }
 
 @mixin media-query($size) {
-    @if $size == sm {
-        @media (min-width: 600px) {
-            @content;
-        }
-    } @else if $size == md {
-        @media (min-width: 726px) {
-            @content;
-        }
-    } @else if $size == lg {
-        @media (min-width: 900px) {
-            @content;
-        }
+  @if $size == sm {
+    @media (min-width: 600px) {
+      @content;
     }
+  }
+
+  @else if $size == md {
+    @media (min-width: 726px) {
+      @content;
+    }
+  }
+
+  @else if $size == lg {
+    @media (min-width: 900px) {
+      @content;
+    }
+  }
 }
 
 // KeyFrames
 @keyframes spin {
-    0% {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    100% {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
 }
 
 @keyframes card-entry {
-    from {
-        opacity: 0.5;
-        left: 500px;
-    }
-    to {
-        opacity: 1;
-        left: 0px;
-    }
+  from {
+    opacity: 0.5;
+    left: 500px;
+  }
+
+  to {
+    opacity: 1;
+    left: 0;
+  }
 }
 
 /* Font Icons */
 @font-face {
-    font-family: "icomoon";
-    src: url("/assets/fonts/icons/icomoon.eot?rel7yd");
-    src: url("/assets/fonts/icons/icomoon.eot?rel7yd#iefix") format("embedded-opentype"),
-        url("/assets/fonts/icons/icomoon.ttf?rel7yd") format("truetype"),
-        url("/assets/fonts/icons/icomoon.woff?rel7yd") format("woff"),
-        url("/assets/fonts/icons/icomoon.svg?rel7yd#icomoon") format("svg");
-    font-weight: normal;
-    font-style: normal;
-    font-display: block;
+  font-family: "icomoon";
+  src: url("/assets/fonts/icons/icomoon.eot?rel7yd");
+  src:
+    url("/assets/fonts/icons/icomoon.eot?rel7yd#iefix") format("embedded-opentype"),
+    url("/assets/fonts/icons/icomoon.ttf?rel7yd") format("truetype"),
+    url("/assets/fonts/icons/icomoon.woff?rel7yd") format("woff"),
+    url("/assets/fonts/icons/icomoon.svg?rel7yd#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
 }
 
 [class^="icon-"],
 [class*=" icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: "icomoon" !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon', serif !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-pointer-up:before {
-    content: "\e909";
+.icon-pointer-up::before {
+  content: "\e909";
 }
-.icon-non-toxic:before {
-    content: "\e908";
+
+.icon-non-toxic::before {
+  content: "\e908";
 }
-.icon-arrow-down:before {
-    content: "\e900";
+
+.icon-arrow-down::before {
+  content: "\e900";
 }
-.icon-high-sun:before {
-    content: "\e901";
+
+.icon-high-sun::before {
+  content: "\e901";
 }
-.icon-low-sun:before {
-    content: "\e902";
+
+.icon-low-sun::before {
+  content: "\e902";
 }
-.icon-no-sun:before {
-    content: "\e903";
+
+.icon-no-sun::before {
+  content: "\e903";
 }
-.icon-onde-drop:before {
-    content: "\e904";
+
+.icon-onde-drop::before {
+  content: "\e904";
 }
-.icon-three-drops:before {
-    content: "\e905";
+
+.icon-three-drops::before {
+  content: "\e905";
 }
-.icon-toxic:before {
-    content: "\e906";
+
+.icon-toxic::before {
+  content: "\e906";
 }
-.icon-two-drops:before {
-    content: "\e907";
+
+.icon-two-drops::before {
+  content: "\e907";
 }

@@ -1,24 +1,26 @@
 #root {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .top-content,
+  .bottom-content {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 70px;
 
-    .top-content,
-    .bottom-content {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        padding-bottom: 70px;
-        .container {
-            width: $container-width;
-            padding: 0 20px;
-        }
+    .container {
+      width: $container-width;
+      padding: 0 20px;
     }
-    .bottom-content {
-        background-color: #f2f2f2;
-    }
+  }
+
+  .bottom-content {
+    background-color: #f2f2f2;
+  }
 }
 
 .hide {
-    display: none !important;
+  display: none !important;
 }
