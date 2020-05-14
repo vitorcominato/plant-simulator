@@ -5,9 +5,39 @@ const FormResult = {
     end: 0,
   },
 
+  /** Swipe iteration */
+  handleSwipe: () => {
+    const DOMResulCards = document.getElementById('result-cards');
+    DOMResulCards.addEventListener('touchstart', (event) => {
+      FormResult.isDragging = true;
+      FormResult.touchAxis.start = event.touches[0].clientX;
+    }, { passive: true });
+
+    DOMResulCards.addEventListener('touchmove', (event) => {
+      const moved = FormResult.touchAxis.start - event.touches[0].clientX;
+      FormResult.touchAxis.start = event.touches[0].clientX;
+      const widthResultCards = DOMResulCards.offsetWidth;
+      const maxSwipe = document.querySelector('.box-card').offsetWidth - widthResultCards;
+
+      const currentLeftPx = getComputedStyle(DOMResulCards).left;
+      const currentLeft = Number(currentLeftPx.split('px')[0]);
+      let newPosition = currentLeft - moved;
+      newPosition = newPosition > 0 ? 0 : newPosition;
+      newPosition = newPosition < maxSwipe ? maxSwipe : newPosition;
+
+      DOMResulCards.style.left = `${newPosition}px`;
+    }, { passive: true });
+
+    DOMResulCards.addEventListener('touchend', () => {
+      FormResult.isDragging = false;
+    }, { passive: true });
+  },
+
   setWidthSwiper: (numberOfCards) => {
+    const DOMResulCards = document.getElementById('result-cards');
     const widthResult = (document.querySelector('.box-card').offsetWidth * numberOfCards) + 20;
-    document.getElementById('result-cards').style.width = `${widthResult}px`;
+    DOMResulCards.style.left = '0px';
+    DOMResulCards.style.width = `${widthResult}px`;
   },
 
   render: async () => `
@@ -41,35 +71,10 @@ const FormResult = {
   `,
 
   componentDidMount: async () => {
-    const DOMResulCards = document.getElementById('result-cards');
     document.getElementById('btn-back-to-top').onclick = () => {
       document.getElementById('top-content').scrollIntoView();
     };
-
-    /** Swipe iteration */
-    DOMResulCards.addEventListener('touchstart', (event) => {
-      FormResult.isDragging = true;
-      FormResult.touchAxis.start = event.touches[0].clientX;
-    }, { passive: true });
-
-    DOMResulCards.addEventListener('touchmove', (event) => {
-      const moved = FormResult.touchAxis.start - event.touches[0].clientX;
-      FormResult.touchAxis.start = event.touches[0].clientX;
-      const widthResultCards = DOMResulCards.offsetWidth;
-      const maxSwipe = document.querySelector('.box-card').offsetWidth - widthResultCards;
-
-      const currentLeftPx = getComputedStyle(DOMResulCards).left;
-      const currentLeft = Number(currentLeftPx.split('px')[0]);
-      let newPosition = currentLeft - moved;
-      newPosition = newPosition > 0 ? 0 : newPosition;
-      newPosition = newPosition < maxSwipe ? maxSwipe : newPosition;
-
-      DOMResulCards.style.left = `${newPosition}px`;
-    }, { passive: true });
-
-    DOMResulCards.addEventListener('touchend', () => {
-      FormResult.isDragging = false;
-    }, { passive: true });
+    FormResult.handleSwipe();
   },
 };
 
