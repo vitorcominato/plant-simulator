@@ -1,7 +1,7 @@
 
-<p align="center">Green Thumb</p>
+<p align="center"><img src="https://green-thumb-red-ventures.netlify.app/assets/images/green-logo.png"></p>
 
-A simple single page built in vanillajs and webpack that helps you find your plant friend
+<p align="center">A simple single page built in vanillajs and webpack that helps you find your plant friend</p>
 
 ## Demo
 
@@ -48,14 +48,6 @@ npm run build
 ## Considerations
 Develop this thinking about componentization and trying to show my css and javascript habilities as my organization building a application from ground zero.
 If you guys think it is not a good approach, please help me with a feedback or a code review. That would be great :)
-
-## Questions
-
-If you have any questions, ideas or you want to discuss with Vue Material community, use [Discord](https://discord.gg/vuematerial) to join us.
-
-## Contributing
-
-Please make sure to read the [Contributing Guide](https://github.com/vuematerial/vue-material/blob/master/.github/CONTRIBUTING.md) before making a pull request.
 
 ## Browser Support
 
