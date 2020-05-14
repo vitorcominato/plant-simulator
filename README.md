@@ -12,20 +12,20 @@ A simple single page built in vanillajs and webpack that helps you find your pla
 If you use yarn
 
 ``` bash
-// Install dependencies
+# Install dependencies
 yarn
 
-// run application in http://localhost:8080
+# run application in http://localhost:8080
 yarn dev
 ```
 
 If you use npm
 
 ``` bash
-// Install dependencies
+# Install dependencies
 npm install
 
-// run application in http://localhost:8080
+# run application in http://localhost:8080
 npm run dev
 ```
 
@@ -34,14 +34,14 @@ npm run dev
 If you use yarn
 
 ``` bash
-// Files are avaible in public folder
+# Files are avaible in public folder
 yarn build
 ```
 
 If you use npm
 
 ``` bash
-// Files are avaible in public folder
+# Files are avaible in public folder
 npm run build
 ```
 
