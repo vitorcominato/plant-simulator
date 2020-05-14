@@ -2,6 +2,9 @@ import Header from '../components/Header';
 import FormQuestions from '../components/FormQuestions';
 import FormResult from '../components/FormResult';
 
+/**
+ * Home Page of Green thumb
+* */
 const Home = {
   render: async () => {
     const header = await Header.render();

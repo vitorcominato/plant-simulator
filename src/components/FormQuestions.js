@@ -2,6 +2,9 @@ import CustomSelect from './CustomSelect';
 import FormResult from './FormResult';
 import Card from './Card';
 
+/**
+ * Component that renders green thumb form
+* */
 const FormQuestions = {
   getPlantApi: {
     endPoint: 'https://6nrr6n9l50.execute-api.us-east-1.amazonaws.com/default/front-plantTest-service',
@@ -34,6 +37,12 @@ const FormQuestions = {
     },
   },
 
+
+  /**
+   * @method changeSelect
+   * @param event event trggered from select change
+   * Fire when CustomSelect component changes value
+  * */
   changeSelect: (event) => {
     const { id } = event.target;
     const fieldName = id.split('-')[1];
@@ -41,6 +50,10 @@ const FormQuestions = {
     FormQuestions.checkFields();
   },
 
+  /**
+   * @method getPlants
+   * Call method from endpoint to get plants
+  * */
   getPlants: async () => {
     const { getPlantApi, questionValues } = FormQuestions;
     const { endPoint, methodParams } = getPlantApi;
@@ -54,6 +67,12 @@ const FormQuestions = {
     }
   },
 
+  /**
+   * @method iconsCard
+   * @param plantProps object returned from api method
+   * @returns a array of strings
+   * Method that returns icons passad
+  * */
   iconsCard: (plantProps) => {
     const iconsCard = [];
     iconsCard.push(FormQuestions.icons.water[plantProps.water]);
@@ -63,6 +82,11 @@ const FormQuestions = {
     return iconsCard;
   },
 
+  /**
+   * @method renderPlants
+   * @param plants array returned from api method
+   * Method that render the cards
+  * */
   renderPlants: async (plants) => {
     let allCards = '';
     plants.map((plantElement, index) => {
@@ -79,6 +103,10 @@ const FormQuestions = {
     await FormResult.setWidthSwiper(plants.length);
   },
 
+  /**
+   * @method checkFields
+   * Check if all fields are filled than proceed to call api mehtod
+  * */
   checkFields: async () => {
     const keysQuestions = Object.keys(FormQuestions.questionValues);
     let hasEmptyValue = false;

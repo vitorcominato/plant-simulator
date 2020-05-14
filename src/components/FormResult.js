@@ -1,3 +1,7 @@
+/**
+   * FormResult component
+   * Displays the result of method call in FormQuestion
+  * */
 const FormResult = {
   isDragging: false,
   touchAxis: {
@@ -5,7 +9,10 @@ const FormResult = {
     end: 0,
   },
 
-  /** Swipe iteration */
+  /**
+   * @method handleSwipe
+   * Handle Swipe iteration for the cards
+  * */
   handleSwipe: () => {
     const DOMResulCards = document.getElementById('result-cards');
     DOMResulCards.addEventListener('touchstart', (event) => {
@@ -33,6 +40,11 @@ const FormResult = {
     }, { passive: true });
   },
 
+  /**
+   * @method setWidthSwiper
+   * @param numberOfCards Number of cards shown
+   * Verify number of cards that is displaying and set the widget of the swiper
+  * */
   setWidthSwiper: (numberOfCards) => {
     const DOMResulCards = document.getElementById('result-cards');
     const widthResult = (document.querySelector('.box-card').offsetWidth * numberOfCards) + 20;

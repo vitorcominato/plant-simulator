@@ -1,3 +1,6 @@
+/**
+ * Card component
+* */
 const Card = {
   render: (props) => {
     const {
@@ -28,9 +31,6 @@ const Card = {
           </div>
         </li>
       `;
-  },
-
-  componentDidMount: async () => {
   },
 };
 

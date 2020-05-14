@@ -1,3 +1,6 @@
+/**
+ * Header component of Green thumb
+* */
 const Header = {
   render: async () => {
     const view = `
@@ -7,8 +10,6 @@ const Header = {
       </header>
     `;
     return view;
-  },
-  componentDidMount: async () => {
   },
 };
 

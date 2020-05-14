@@ -1,4 +1,13 @@
+/**
+ * A Custom select input component
+* */
 const CustomSelect = {
+  /**
+   * @method loadOptions
+   * @param options array of object with options that have to contain property value and label
+   * @returns html with given options
+   * Method that return html options for the build of select input
+  * */
   loadOptions: (options) => {
     let hOptions = '';
     options.map((el) => {
