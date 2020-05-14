@@ -102,7 +102,7 @@ header {
     }
     .list-results {
         height: 354px;
-        overflow: hidden; 
+        overflow: hidden;
         position: relative;
         padding-top: 31px;
         .result-cards {
@@ -121,7 +121,7 @@ header {
         .list-results {
             overflow: unset;
             height: auto;
-            .result-cards { 
+            .result-cards {
                 // Important use to overrule swiper width that is inline
                 width: auto !important;
                 position: relative;
@@ -145,6 +145,10 @@ header {
         -webkit-appearance: none;
         -moz-appearance: none;
         padding: 11px 18px;
+    }
+    .label-select {
+        position: absolute;
+        opacity: 0;
     }
     .icon-arrow-down {
         position: absolute;

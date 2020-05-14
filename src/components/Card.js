@@ -16,7 +16,7 @@ const Card = {
         <li class="box-card">
           <div class="card data-order-${order}">
             <div class="box-img">
-              <img src="${url}">
+              <img src="${url}" alt="${name}">
             </div>
             <div class="box-info">
               <h4>${name}</h4>

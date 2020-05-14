@@ -18,11 +18,11 @@ const FormResult = {
           <p>Use the filters above to find the plant that best fits your environment :)</p>
         </div>
         <div class="box-data-empty img-box">
-          <img src="/assets/images/dataempty.png" alt="">
+          <img src="/assets/images/dataempty.png" alt="No Data">
         </div>
       </div>
       <div class="data-result hide" id="data-result">
-        <img class="pick-image" src="/assets/images/pick.png">
+        <img class="pick-image" src="/assets/images/pick.png" alt="Hand picking plant">
         <h3 class="title-result">Our picks for you</h3>
         <div class="list-results">
           <ul class="result-cards" id="result-cards"></ul>
