@@ -5,7 +5,7 @@
 
 ## Demo
 
-<a href="https://green-thumb-red-ventures.netlify.app/" target="_blank">Demo</a>
+<a href="https://green-thumb-red-ventures.netlify.app/" target="_blank">Green Thumb</a>
 
 ## How to run
 
