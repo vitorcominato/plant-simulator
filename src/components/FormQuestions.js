@@ -88,6 +88,7 @@ const FormQuestions = {
    * Method that render the cards
   * */
   renderPlants: async (plants) => {
+    const DOMResultSection = document.getElementById('result-section');
     let allCards = '';
     plants.map((plantElement, index) => {
       const icons = FormQuestions.iconsCard(plantElement);
@@ -101,6 +102,7 @@ const FormQuestions = {
     });
     document.getElementById('result-cards').innerHTML = await allCards;
     await FormResult.setWidthSwiper(plants.length);
+    await DOMResultSection.scrollIntoView();
   },
 
   /**
@@ -117,7 +119,6 @@ const FormQuestions = {
       }
       return true;
     });
-    const DOMResultSection = document.getElementById('result-section');
     const DOMDataEmpty = document.getElementById('data-empty');
     const DOMDataResult = document.getElementById('data-result');
     const DOMLoading = document.getElementById('loading');
@@ -141,7 +142,7 @@ const FormQuestions = {
     } else {
       DOMDataEmpty.classList.remove('hide');
     }
-    DOMResultSection.scrollIntoView();
+
     return true;
   },
 

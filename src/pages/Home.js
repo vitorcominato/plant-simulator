@@ -26,7 +26,6 @@ const Home = {
     `;
   },
   componentDidMount: async () => {
-    Header.componentDidMount();
     FormQuestions.componentDidMount();
     FormResult.componentDidMount();
   },
