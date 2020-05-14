@@ -11,7 +11,9 @@
     "dev:assets": "webpack --watch",
     "dev:start": "live-server --host=localhost --watch=./public/ --mount=/:public/",
     "dev": "npm-run-all -p dev:*",
-    "build": "cross-env NODE_ENV=production webpack"
+    "build": "cross-env NODE_ENV=production webpack",
+    "lint": "eslint src -c .eslintrc.js --ext js",
+    "lint-fix": "eslint src -c .eslintrc.js --ext js --fix"
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -21,7 +23,7 @@
     "cross-env": "^7.0.2",
     "css-loader": "^3.5.3",
     "cssnano": "^4.1.10",
-    "eslint": "^6.8.0",
+    "eslint": "^7.0.0",
     "eslint-config-airbnb-base": "^14.1.0",
     "eslint-plugin-import": "^2.20.2",
     "file-loader": "^6.0.0",

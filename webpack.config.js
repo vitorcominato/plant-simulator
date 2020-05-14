@@ -7,6 +7,7 @@ module.exports = {
   mode: devMode ? 'development' : 'production',
 
   entry: [
+    'regenerator-runtime/runtime.js',
     './src/index.js',
     './src/styles/main.scss',
   ],

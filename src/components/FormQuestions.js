@@ -3,7 +3,7 @@ import FormResult from './FormResult';
 import Card from './Card';
 
 const FormQuestions = {
-  getPlant: {
+  getPlantApi: {
     endPoint: 'https://6nrr6n9l50.execute-api.us-east-1.amazonaws.com/default/front-plantTest-service',
     methodParams: {
       method: 'GET',
@@ -42,8 +42,11 @@ const FormQuestions = {
   },
 
   getPlants: async () => {
+    const { getPlantApi, questionValues } = FormQuestions;
+    const { endPoint, methodParams } = getPlantApi;
+    const { light, water, pet } = questionValues;
     try {
-      const response = await fetch(`${FormQuestions.getPlant.endPoint}?sun=${FormQuestions.questionValues.light}&water=${FormQuestions.questionValues.water}&pets=${FormQuestions.questionValues.pet}`, FormQuestions.getPlant.methodParams);
+      const response = await fetch(`${endPoint}?sun=${light}&water=${water}&pets=${pet}`, methodParams);
       const json = await response.json();
       return json;
     } catch (err) {

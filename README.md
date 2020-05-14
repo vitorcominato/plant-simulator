@@ -5,7 +5,7 @@
 
 ## Demo
 
-<a href="https://green-thumb-red-ventures.netlify.app/" target="_blank">Green Thumb</a>
+<a href="https://green-thumb-red-ventures.netlify.app/" target="_blank">Green Thumb demo page</a>
 
 ## How to run
 
@@ -44,6 +44,19 @@ If you use npm
 # Files are avaible in public folder
 npm run build
 ```
+
+## Verify eslint report
+
+``` bash
+yarn lint
+```
+
+If you use npm
+
+``` bash
+npm run lint
+```
+
 
 ## Considerations
 Develop this thinking about componentization and trying to show my css and javascript habilities as my organization building a application from scratch.

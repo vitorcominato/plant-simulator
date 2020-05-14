@@ -1,7 +1,4 @@
-/** Regenerator is imported so the async await functions work properly */
-import 'regenerator-runtime/runtime';
 import Home from './pages/Home';
-import Error404 from './pages/Error404';
 
 // Route list
 const routes = {
@@ -18,7 +15,7 @@ const router = async () => {
 
   const parsedURL = (page ? `/${page}` : '/');
 
-  const pageToRender = routes[parsedURL] ? routes[parsedURL] : Error404;
+  const pageToRender = routes[parsedURL];
   root.innerHTML = await pageToRender.render();
   await pageToRender.componentDidMount();
 };
