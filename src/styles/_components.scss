@@ -160,6 +160,7 @@ header {
     font-weight: normal;
     color: #848484;
     margin: 15px 0 25px;
+    b { font-weight: 700; }
   }
 
   .icon-arrow-down {
@@ -243,7 +244,7 @@ header {
 
       h4,
       p {
-        font-weight: bold;
+        font-weight: 700;
 
         @include font-size($font-ml);
 
@@ -257,9 +258,7 @@ header {
         height: 44px;
       }
 
-      p {
-        width: 55%;
-      }
+      p { width: 55%; }
 
       .icons {
         width: 45%;
@@ -267,18 +266,14 @@ header {
         justify-content: space-around;
         align-items: center;
 
-        i {
-          @include font-size($font-lg);
-        }
+        i { @include font-size($font-lg); }
       }
     }
   }
 }
 
 @include media-query(lg) {
-  .box-card {
-    width: 33.3%;
-  }
+  .box-card { width: 33.3%; }
 }
 
 /* Loop for card entry animation */

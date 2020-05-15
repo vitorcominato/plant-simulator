@@ -1,4 +1,36 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap");
+// Font-face
+
+/* montserrat-regular - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/Montserrat/montserrat-v14-latin-regular.eot");
+  src:
+    local("Montserrat Regular"),
+    local("Montserrat-Regular"),
+    url("/assets/fonts/Montserrat/montserrat-v14-latin-regular.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/Montserrat/montserrat-v14-latin-regular.woff2") format("woff2"),
+    url("/assets/fonts/Montserrat/montserrat-v14-latin-regular.woff") format("woff"),
+    url("/assets/fonts/Montserrat/montserrat-v14-latin-regular.ttf") format("truetype"),
+    url("/assets/fonts/Montserrat/montserrat-v14-latin-regular.svg#Montserrat") format("svg");
+}
+
+/* montserrat-700 - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/assets/fonts/Montserrat/montserrat-v14-latin-700.eot");
+  src:
+    local("Montserrat Bold"),
+    local("Montserrat-Bold"),
+    url("/assets/fonts/Montserrat/montserrat-v14-latin-700.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/Montserrat/montserrat-v14-latin-700.woff2") format("woff2"),
+    url("/assets/fonts/Montserrat/montserrat-v14-latin-700.woff") format("woff"),
+    url("/assets/fonts/Montserrat/montserrat-v14-latin-700.ttf") format("truetype"),
+    url("/assets/fonts/Montserrat/montserrat-v14-latin-700.svg#Montserrat") format("svg");
+}
 
 // Variables
 
@@ -125,7 +157,7 @@ body {
 [class^="icon-"],
 [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon', serif !important;
+  font-family: "icomoon", serif !important;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
