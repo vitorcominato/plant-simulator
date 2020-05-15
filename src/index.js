@@ -5,9 +5,8 @@ const routes = {
   '/': Home,
 };
 
-
 const router = async () => {
-  const root = null || document.getElementById('root');
+  const root = document.getElementById('root');
 
   const url = document.location.hash.slice(1).toLowerCase() || '/';
   const aRequestUrl = url.split('/');

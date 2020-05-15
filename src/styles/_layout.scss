@@ -12,7 +12,13 @@
 
     .container {
       width: $container-width;
-      padding: 0 20px;
+      padding: 0 35px;
+    }
+
+    @include media-query(sm) {
+      .container {
+        padding: 0 20px;
+      }
     }
   }
 
