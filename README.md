@@ -34,18 +34,20 @@ npm run dev
 If you use yarn
 
 ``` bash
-# Files are avaible in public folder
+# Files are available in public folder
 yarn build
 ```
 
 If you use npm
 
 ``` bash
-# Files are avaible in public folder
+# Files are available in public folder
 npm run build
 ```
 
 ## Verify eslint report
+
+If you use yarn
 
 ``` bash
 yarn lint
